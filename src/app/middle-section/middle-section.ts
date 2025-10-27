@@ -1,0 +1,38 @@
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+@Component({
+  selector: 'app-middle-section',
+  imports: [RouterLink],
+  template: `
+    <div class="media-screen-750:h-[600px] h-72  relative">
+      <img src="/middle-section.webp" class="w-full h-full object-cover" alt="middle" />
+      <div class="absolute inset-0 bg-black opacity-30 hidden media-screen-750:block"></div>
+      <div
+        class="absolute inset-0 media-screen-750:flex flex-col
+         gap-4 justify-center items-center hidden"
+      >
+        <p class="text-white text-base">SOOTHE YOUR STYLE</p>
+        <h3 class="text-white text-4xl font-bold">FRAGRANCE & APPAREL</h3>
+        <a
+          routerLink="/fragrance"
+          class="text-white rounded-full px-8 py-3 bg-transparent
+          border hover:border-2 border-white"
+          >Show Now</a
+        >
+      </div>
+    </div>
+    <div class="media-screen-750:hidden flex flex-col items-center py-8">
+      <p class="text-base">SOOTHE YOUR STYLE</p>
+      <h3 class="text-4xl font-bold pt-4">FRAGRANCE & APPAREL</h3>
+      <a
+        routerLink="/fragrance"
+        class="rounded-full px-8 py-3 bg-transparent
+          border hover:border-2"
+        >Show Now</a
+      >
+    </div>
+  `,
+  styles: ``,
+})
+export class MiddleSection {}
