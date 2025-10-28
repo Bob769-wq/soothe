@@ -5,7 +5,7 @@ import { RouterLink } from '@angular/router';
   selector: 'app-middle-section',
   imports: [RouterLink],
   template: `
-    <div class="media-screen-750:h-[600px] h-72  relative">
+    <div class="media-screen-750:h-600 h-72  relative">
       <img src="/middle-section.webp" class="w-full h-full object-cover" alt="middle" />
       <div class="absolute inset-0 bg-black opacity-30 hidden media-screen-750:block"></div>
       <div

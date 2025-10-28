@@ -22,6 +22,9 @@ module.exports = {
       spacing: {
         'header-height': '62px',
       },
+      height: {
+        600: '37.5rem',
+      },
     },
   },
   plugins: [],
