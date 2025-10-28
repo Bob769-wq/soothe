@@ -14,7 +14,6 @@ import { Copyright } from './copyright/copyright';
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet,
     Header,
     HeroSection,
     Fragrance,

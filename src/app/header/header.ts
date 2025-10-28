@@ -12,7 +12,7 @@ interface NavList {
   imports: [RouterLink, ReactiveFormsModule],
   template: `
     <header
-      class="fixed left-0 top-0 right-0 z-[10000]"
+      class="fixed left-0 top-0 right-0 z-30"
       [class]="isScrolled() ? 'bg-white' : 'bg-transparent'"
     >
       <div class=" max-w-1450 mx-auto px-4 media-screen-990:px-12 py-1.5">
@@ -56,12 +56,12 @@ interface NavList {
                   </span>
                 </a>
                 <ul
-                  class="absolute top-full group-hover/item:py-6 px-4 w-52 max-h-0 group-hover/item:max-h-96
+                  class="absolute top-full group-hover/item:py-6 w-52 max-h-0 group-hover/item:max-h-96
                   transition-all duration-300 overflow-hidden group-hover/item:overflow-visible bg-white group-hover/item:border"
                 >
                   @for (child of item.children; track child.id) {
                     @if (child.children) {
-                      <li class="py-3 group/child relative">
+                      <li class="py-3 px-4 group/child relative">
                         <a [routerLink]="child.link" class="flex justify-between">
                           <span>{{ child.title }}</span>
                           <span>
@@ -77,14 +77,14 @@ interface NavList {
                           transition-all duration-300 bg-white border"
                         >
                           @for (grandchild of child.children; track grandchild.id) {
-                            <li class="py-3">
+                            <li class="py-3 px-4">
                               <a [routerLink]="grandchild.link">{{ grandchild.title }}</a>
                             </li>
                           }
                         </ul>
                       </li>
                     } @else {
-                      <li class="py-3">
+                      <li class="py-3 px-4">
                         <a [routerLink]="child.link">{{ child.title }}</a>
                       </li>
                     }
@@ -103,7 +103,7 @@ interface NavList {
       </div>
     </header>
     <div
-      class="fixed top-header-height left-0 h-full w-96 bg-white z-[12000] overflow-y-auto transition-transform duration-500 ease-in-out"
+      class="fixed top-header-height left-0 h-full w-96 bg-white z-50 overflow-y-auto transition-transform duration-500 ease-in-out"
       [class]="isMenuOpen() ? 'translate-x-0' : '-translate-x-full'"
     >
       <div class="pt-12 h-3/4">
@@ -134,7 +134,7 @@ interface NavList {
     </div>
 
     @if (isSearchOpenBigScreenOpen()) {
-      <div class="fixed inset-0 z-[11000]">
+      <div class="fixed inset-0 z-40">
         <div
           class="absolute inset-0 bg-black bg-opacity-40 cursor-pointer"
           (click)="toggleSearchBigScreen()"

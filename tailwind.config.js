@@ -22,6 +22,9 @@ module.exports = {
       spacing: {
         'header-height': '62px',
       },
+      minHeight: {
+        600: '37.5rem',
+      },
       height: {
         600: '37.5rem',
       },

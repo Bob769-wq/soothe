@@ -5,8 +5,8 @@ import { RouterLink } from '@angular/router';
   selector: 'app-new-for',
   imports: [RouterLink],
   template: `
-    <div class=" media-screen-750:h-600 h-72 relative">
-      <img src="/new-for.webp" class="w-full h-full object-cover" alt="middle" />
+    <div class="min-h-72 media-screen-750:min-h-600 media-screen-1060:min-h-[80vh]  relative">
+      <img src="/new-for.webp" class="absolute w-full h-full object-cover" alt="middle" />
       <div class="absolute inset-0 bg-black opacity-30 hidden media-screen-750:block"></div>
       <div
         class="absolute inset-0 media-screen-750:flex flex-col gap-4

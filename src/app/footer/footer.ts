@@ -29,9 +29,9 @@ import { RouterLink } from '@angular/router';
             <h4 class="font-bold text-lg">Our mission</h4>
             <div class="flex flex-col gap-2 text-base">
               <p>水月商行 ，客服信箱：</p>
-              <p>serve.soothe@gmail.com，聯絡信箱：</p>
-              <p>soothe026@gmail.com，服務專線：</p>
-              <p>0958105082</p>
+              <p class="font-bold">serve.soothe@gmail.com，聯絡信箱：</p>
+              <p class="font-bold">soothe026@gmail.com，服務專線：</p>
+              <p class="font-bold">0958105082</p>
             </div>
           </div>
           <div class="flex flex-col gap-6">

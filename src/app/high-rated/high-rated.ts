@@ -33,7 +33,9 @@ interface Product {
               </div>
               <p class="pb-10 pt-2">{{ item.comment }}</p>
             </div>
-            <div class="absolute inset-0 flex justify-center items-center top-8">
+            <div
+              class="absolute inset-0 flex justify-center items-center top-10 media-screen-750:top-14"
+            >
               <div class="rounded-lg bg-white px-3 py-2 shadow-md">
                 <span
                   ><i

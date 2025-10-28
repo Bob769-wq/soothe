@@ -7,7 +7,7 @@ import { RouterLink } from '@angular/router';
   template: `
     <div class="bg-gray-400">
       <a routerLink="/activity">
-        <img src="/hero-section.webp" class="w-full h-full object-cover" alt="hero-section" />
+        <img src="/hero-section.webp" class="max-w-full" alt="hero-section" />
       </a>
     </div>
   `,

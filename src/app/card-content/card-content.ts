@@ -27,7 +27,9 @@ interface ProductContent {
         class="absolute flex  media-screen-750:hidden media-screen-750:group-hover:flex justify-center items-center
         rounded-full bg-add-to-cart -right-5 -top-5"
       >
-        <a class="p-3"><i class="fa-solid fa-plus fa-xl" style="color: #ffffff;"></i></a>
+        <a class="w-10 h-10 flex justify-center items-center"
+          ><i class="fa-solid fa-plus fa-xl" style="color: #ffffff;"></i
+        ></a>
       </div>
     </a>
   `,

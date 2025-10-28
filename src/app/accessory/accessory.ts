@@ -22,16 +22,16 @@ interface Product {
       <div class="grid grid-cols-2 media-screen-750:grid-cols-3 gap-x-8 gap-y-12 py-12">
         @for (item of productItem; track item.id) {
           <a [routerLink]="item.link" class="flex flex-col group relative">
-            <div class="aspect-square rounded-lg overflow-hidden relative">
+            <div class="rounded-lg overflow-hidden relative">
               <img
                 [src]="item.img"
                 [alt]="item.title"
-                class="aspect-square object-cover h-full w-full transition-opacity group-hover:opacity-0 duration-300"
+                class="aspect-square object-cover h-full w-full transition-opacity group-hover:opacity-0 duration-500"
               />
               <img
                 [src]="item.img2"
                 [alt]="item.title"
-                class="aspect-square object-cover h-full w-full absolute inset-0 transition-opacity opacity-0 group-hover:opacity-100 duration-300"
+                class="aspect-square object-cover h-full w-full absolute inset-0 transition-all group-hover:scale-110 opacity-0 group-hover:opacity-100 duration-500"
               />
             </div>
             <div class="py-2">
@@ -57,19 +57,23 @@ interface Product {
       <div class="grid media-screen-750:grid-cols-2 gap-8 my-16">
         @for (item of productCard; track item.id) {
           <a class="flex flex-col rounded-lg overflow-hidden">
-            <div class="aspect-square">
-              <img
-                [src]="item.img"
-                [alt]="item.title"
-                class="aspect-square object-cover h-full w-full"
-              />
-            </div>
+            <img
+              [src]="item.img"
+              [alt]="item.title"
+              class="aspect-square object-cover h-full w-full"
+            />
+
             <div class="p-6 flex flex-col gap-4 items-center bg-information-bg">
               <h3 class="font-bold text-lg">{{ item.topic }}</h3>
               <p class="text-lg">{{ item.title }}</p>
-              <a class="rounded-full border px-8 py-3 border-add-to-cart hover:border-2">{{
-                item.button
-              }}</a>
+              <div class="py-4">
+                <a
+                  [routerLink]="item.link"
+                  class="rounded-full border px-8 py-3 border-add-to-cart hover:border-2"
+                >
+                  {{ item.button }}
+                </a>
+              </div>
             </div>
           </a>
         }
