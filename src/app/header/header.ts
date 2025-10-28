@@ -25,13 +25,16 @@ interface NavList {
                 <i class="fa-solid fa-bars fa-xl" style="color: currentColor;"></i>
               }
             </span>
-            <span (click)="toggleSearchBigScreen()">
+            <span (click)="toggleSearchBigScreen()" class="cursor-pointer">
               <i class="fa-solid fa-magnifying-glass fa-xl" style="color: currentColor;"></i>
             </span>
           </div>
           <a routerLink="/"><img src="/logo.webp" class="w-100" alt="logo" /></a>
           <div class="flex items-center gap-5 media-screen-990:px-2.5">
-            <span class="media-screen-990:block hidden" (click)="toggleSearchBigScreen()">
+            <span
+              class="media-screen-990:block hidden cursor-pointer"
+              (click)="toggleSearchBigScreen()"
+            >
               <i class="fa-solid fa-magnifying-glass fa-xl" style="color: currentColor;"></i>
             </span>
             <a routerLink="/user" class="media-screen-990:block hidden">
